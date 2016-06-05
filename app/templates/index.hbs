@@ -3,5 +3,13 @@
 
 <p>We are exclusive so prices are high and quality is regular.</p>
 
+{{#each model as |rental|}}
+  <h2>{{rental.title}}</h2>
+  <p>Owner: {{rental.owner}}</p>
+  <p>Property type: {{rental.type}}</p>
+  <p>Location: {{rental.city}}</p>
+  <p>Number of bedrooms: {{rental.bedrooms}}</p>
+{{/each}}
+
 {{#link-to "about"}}Read about us!{{/link-to}} |
 {{#link-to "contact"}}Try not to reach us!{{/link-to}}
