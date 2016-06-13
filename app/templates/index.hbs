@@ -2,7 +2,8 @@
 <h4>be humble and rent what we suggest</h4>
 
 <p>We are exclusive so prices are high and quality is regular.</p>
-
+<br /><br />
+{{filter-listing filteredList=filteredList autoComplete=(action 'autoComplete') search=(action 'search')}}
 {{#each model as |rentalUnit|}}
   {{rental-listing rental=rentalUnit}}
 {{/each}}
