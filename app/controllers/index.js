@@ -5,9 +5,16 @@ export default Ember.Controller.extend({
   actions: {
     autoComplete(param) {
       if (param !== '') {
-        this.get('store').query('rental', {city.param}).then((result) => this.set('filteredList', result));
+        this.get('store').query('rental', { city: param }).then((result) => this.set('filteredList', result));
       } else {
         this.set('filteredList', null);
+      }
+    },
+    search(param) {
+      if (param !== '') {
+        this.store.query('rental', { city: param }).then((result) => this.set('model', result));
+      } else {
+        this.get('store').findAll('rental').then((result) => this.set('model', result));
       }
     }
   }
