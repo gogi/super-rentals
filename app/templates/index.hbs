@@ -1,12 +1,15 @@
-<h1>We are Super Rentals</h1>
-<h4>be humble and rent what we suggest</h4>
+<div class="jumbo">
+  <div class="right tomster"></div>
+  <h1>We are Super Rentals</h1>
+  <h4>be humble and rent what we suggest</h4>
 
-<p>We are exclusive so prices are high and quality is regular.</p>
-<br /><br />
-{{filter-listing filteredList=filteredList autoComplete=(action 'autoComplete') search=(action 'search')}}
-{{#each model as |rentalUnit|}}
-  {{rental-listing rental=rentalUnit}}
-{{/each}}
+  <p>We are exclusive so prices are high and quality is regular.</p>
+  <br /><br />
+  {{filter-listing filteredList=filteredList autoComplete=(action 'autoComplete') search=(action 'search')}}
+  {{#each model as |rentalUnit|}}
+    {{rental-listing rental=rentalUnit}}
+  {{/each}}
 
-{{#link-to "about"}}Read about us!{{/link-to}} |
-{{#link-to "contact"}}Try not to reach us!{{/link-to}}
+  {{#link-to "about" class="button"}}Read about us!{{/link-to}} |
+  {{#link-to "contact" class="button"}}Try not to reach us!{{/link-to}}
+</div>
